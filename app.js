@@ -21,9 +21,11 @@ app.use(AV.Cloud.HttpsRedirect())
 
 // proxy
 const proxy = require("http-proxy-middleware").createProxyMiddleware
+console.log('Target = %s', process.env.TARGET)
+console.log('Platform = %s', process.env.PLATFORM)
 app.use("/", proxy(["/"], {
     headers: {
-        'X-LC-Platform': 'Leancloud'
+        'X-LC-Platform': process.env.PLATFORM
     },
     target: process.env.TARGET,
     changeOrigin: true,
