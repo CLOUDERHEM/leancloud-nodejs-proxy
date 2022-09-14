@@ -1,0 +1,29 @@
+{
+  "name": "legym-server-proxy",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "test": "mocha"
+  },
+  "dependencies": {
+    "connect-timeout": "^1.9.0",
+    "express": "^4.12.3",
+    "express-ws": "^4.0.0",
+    "leancloud-storage": "^3.0.0",
+    "leanengine": "^3.3.3",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
+    "cors": "^2.8.5",
+    "http-proxy-middleware": "^2.0.6"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0",
+    "should": "^13.2.3",
+    "supertest": "^4.0.2",
+    "supertest-as-promised": "^4.0.2"
+  },
+  "engines": {
+    "node": "10.x"
+  }
+}
