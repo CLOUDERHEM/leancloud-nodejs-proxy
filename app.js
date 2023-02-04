@@ -25,7 +25,8 @@ console.log('Target = %s', process.env.TARGET)
 console.log('Platform = %s', process.env.PLATFORM)
 app.use("/", proxy(["/"], {
     headers: {
-        'X-LC-Platform': process.env.PLATFORM
+        'x-lc-platform': process.env.PLATFORM,
+        'x-lc-token' : process.env.TOKEN
     },
     target: process.env.TARGET,
     changeOrigin: true,
